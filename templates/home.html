@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>HellYeah mind derailer</title>
+		<style>
+			span {
+				font-size: 25px;
+				color: #eee;
+			}
+			body {
+				background: #2b2b2b;
+			}
+			img { width: 300px; }
+			.foot {
+				font-size: 8px;
+				color: #666;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="word1">{{ words[0]|e }}</span><br />
+		<script>words = {{ words|jsonify }}; </script>
+		<div id="image_wrapper"></div>
+		<span id="word2">{{ words[1]|e }}</span>
+		<div class="foot">Copyright &copy; RiddleKiller Ltd.</div>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.2.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/penis.js') }}"></script>
+		<!--<script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>-->
+	</body>
+</html>

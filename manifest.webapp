@@ -1,0 +1,11 @@
+{
+  "version": "19.½_RC1_beta9",
+  "name": "HelYe",
+  "description": "RiddleKiller's official Mind Derailer",
+  "launch_path": "/",
+  "developer": {
+    "name": "RiddleKiller Ltd. in cooperation wit infu",
+    "url": "http://inf.re"
+  },
+  "installs_allowed_from": ["*"]
+}
