@@ -39,6 +39,30 @@ def home(first_id=None, second_id=None, third_id=None):
     words = get_words([first_id, second_id, third_id])
     return render_template('home.html', words=words)
 
+@app.route('/api/words')
+def api_words():
+    return json.dumps(['frirst', '2nd', 'th33rd'])
+
+@app.route('/api/save', methods=['POST'])
+def api_save():
+    # TODO: This is a stub
+
+    # also, is this necessary?
+    image_url = None
+    err = None
+
+    try:
+        image_url = request.form['image_url']
+    except KeyError:
+        err = "No image_url provided"
+
+    if err:
+        print err
+        return err
+
+    print image_url
+    return "Saved!"
+
 @app.route('/manifest.webapp')
 def manifest():
     return open('manifest.webapp').read()
