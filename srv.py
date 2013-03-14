@@ -8,7 +8,7 @@ from output import array
 app = Flask(__name__)
 
 def jsonify(data):
-	return flask.Markup(json.dumps(data))
+    return flask.Markup(json.dumps(data))
 
 app.jinja_env.filters['jsonify'] = jsonify
 
@@ -16,7 +16,7 @@ app.jinja_env.filters['jsonify'] = jsonify
 @app.route('/')
 def home(first_id=None, second_id=None, third_id=None):
     '''
-	print len(array)
+        print len(array)
     while first_id == None:
         rand_int = randint(0, len(array)-1)
         value = array[rand_int]
@@ -41,7 +41,7 @@ def home(first_id=None, second_id=None, third_id=None):
 
 @app.route('/manifest.webapp')
 def manifest():
-	return open('manifest.webapp').read()
+    return open('manifest.webapp').read()
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=6969, debug=True)

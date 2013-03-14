@@ -1,66 +1,64 @@
 <html>
-	<head>
-		<title>So.I.am-a.cat mind derailer</title>
-		<style>
-		
-			
-				@font-face{
-			font-family: "TPBAFK"; src: url("http://so.i.am-a.cat/static/phont/gr82.otf") format('opentype');
-			}
-			body
-			{
-				text-align: center;
-				background: #2b2b2b;
-			}
-			#word1
-			{
-		    	z-index:0;
-				font-family: "TPBAFK";
-		    	position:relative;
-			    margin-top: 25px;
-				font-size: 46px;
-				font-variant: small-caps;
-				color: #eee;
-				text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
-			}
-			#word2
-			{
-			    z-index:0;
-				font-family: 'TPBAFK';
-		    	position:relative;
-				font-size: 46px;
-				font-variant: small-caps;
-				color: #eee;
-				text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
-			}
-			#image_wrapper
-			{
-			    margin-top: -56px;
-			    margin-bottom: -60px;
-			    max-height: 580px;
-			    overflow: hidden;
-			    z-index:1;
-			}
-			#image_wrapper img
-			{
-			    width: 520px;
-			}
-			.foot {
-				font-size: 8px;
-				color: #666;
-				margin-top: 20px;
-				z-index:1;
-			}
-		</style>
-	</head>
-	<body>
-		<script>words = {{ words|jsonify }}; </script>
-		<span id="word1">{{ words[0]|e }}</span>
-		<div id="image_wrapper"></div>
-		<span id="word2">{{ words[1]|e }}</span><br />
-		<div class="foot">Copyright &copy; RiddleKiller Ltd.<br>Features Kelson Sans font by <a href=http://www.fontfabric.com/>FontFabric.com/</a></div>
-		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.2.min.js') }}"></script>
-		<script type="text/javascript" src="{{ url_for('static', filename='js/penis.js') }}"></script>
-		<!--<script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>-->
-	</body>
+<head>
+    <title>So.I.am-a.cat mind derailer</title>
+    <style>
+        @font-face{
+            font-family: "TPBAFK"; src: url("http://so.i.am-a.cat/static/phont/gr82.otf") format('opentype');
+        }
+        body
+        {
+            text-align: center;
+            background: #2b2b2b;
+        }
+        #word1
+        {
+            z-index:0;
+            font-family: "TPBAFK";
+            position:relative;
+            margin-top: 25px;
+            font-size: 46px;
+            font-variant: small-caps;
+            color: #eee;
+            text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+        }
+        #word2
+        {
+            z-index:0;
+            font-family: 'TPBAFK';
+            position:relative;
+            font-size: 46px;
+            font-variant: small-caps;
+            color: #eee;
+            text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+        }
+        #image_wrapper
+        {
+            margin-top: -56px;
+            margin-bottom: -60px;
+            max-height: 580px;
+            overflow: hidden;
+            z-index:1;
+        }
+        #image_wrapper img
+        {
+            width: 520px;
+        }
+        .foot {
+            font-size: 8px;
+            color: #666;
+            margin-top: 20px;
+            z-index:1;
+        }
+    </style>
+</head>
+<body>
+    <script>words = {{ words|jsonify }}; </script>
+    <span id="word1">{{ words[0]|e }}</span>
+    <div id="image_wrapper"></div>
+    <span id="word2">{{ words[1]|e }}</span><br />
+    <div class="foot">Copyright &copy; RiddleKiller Ltd.<br>Features Kelson Sans font by <a href=http://www.fontfabric.com/>FontFabric.com/</a></div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/penis.js') }}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>-->
+</body>
 </html>

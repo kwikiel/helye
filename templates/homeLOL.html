@@ -1,54 +1,55 @@
 <html>
-	<head>
-		<title>HellYeah mind derailer</title>
-		<style>
-			n1  {
-			z-index:1;
-			position:absolute;
-			vertical-align:30%;
-			}
-			n2  {
-			z-index:1;
-			position:absolute;
-			vertical-align:bottom;
-			}
-			span {
-				font-size: 40px;
-				font-variant: small-caps;
-				color: #eee;/*
-				text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+<head>
+    <title>HellYeah mind derailer</title>
+    <style>
+        n1  {
+            z-index:1;
+            position:absolute;
+            vertical-align:30%;
+        }
+        n2  {
+            z-index:1;
+            position:absolute;
+            vertical-align:bottom;
+        }
+        span {
+            font-size: 40px;
+            font-variant: small-caps;
+            color: #eee;/*
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 
-				text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+            text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
 
-				text-shadow: -6px 0 black, 0 6px black, 6px 0 black, 0 -6px black; */
-				text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black, 0px 2px black, -2px 0px black, 0px -2px black, 2px 0px black;
-			}
-			body {
-				background: #2b2b2b;
-				text-align: center;
-			@font-face{ font-family: TPBAFK; src url("../fonts/TPBAFK-Regular.ttf")}
-				}
-			img { width: 500px; max-height: 640px; z-index:0;}
-			.foot {
-				font-size: 8px;
-				color: #666;
-				margin-top: 20px;
-			}
-		</style>
-	</head>
-	<body>
-		<script>words = {{ words|jsonify }}; </script>
-		<div id="image_wrapper">
-		<n1>
-		<span id="word1">{{ words[0]|e }}</span1>
-		</n1> <br />
-		<n2>
-		<span id="word2">{{ words[1]|e }}</span2>
-		</n2>
-		</div>
-		<div class="foot">Copyright &copy; RiddleKiller Ltd.</div>
-		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.2.min.js') }}"></script>
-		<script type="text/javascript" src="{{ url_for('static', filename='js/penis.js') }}"></script>
-		<!--<script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>-->
-	</body>
+            text-shadow: -6px 0 black, 0 6px black, 6px 0 black, 0 -6px black; */
+            text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black, 0px 2px black, -2px 0px black, 0px -2px black, 2px 0px black;
+        }
+        body {
+            background: #2b2b2b;
+            text-align: center;
+            @font-face{ font-family: TPBAFK; src url("../fonts/TPBAFK-Regular.ttf")}
+        }
+        img { width: 500px; max-height: 640px; z-index:0;}
+        .foot {
+            font-size: 8px;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>words = {{ words|jsonify }}; </script>
+    <div id="image_wrapper">
+        <n1>
+            <span id="word1">{{ words[0]|e }}</span1>
+        </n1>
+        <br />
+        <n2>
+            <span id="word2">{{ words[1]|e }}</span2>
+        </n2>
+    </div>
+    <div class="foot">Copyright &copy; RiddleKiller Ltd.</div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/penis.js') }}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>-->
+</body>
 </html>
