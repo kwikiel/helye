@@ -15,33 +15,38 @@ app.jinja_env.filters['jsonify'] = jsonify
 @app.route('/<int:first_id>/<int:second_id>/<int:third_id>')
 @app.route('/')
 def home(first_id=None, second_id=None, third_id=None):
-    '''
-        print len(array)
-    while first_id == None:
-        rand_int = randint(0, len(array)-1)
-        value = array[rand_int]
-        if len(value) > 0:
-            first_id = rand_int
-    while second_id == None:
-        rand_int = randint(0, len(array)-1)
-        value = array[rand_int]
-        if len(value) > 0:
-            second_id = rand_int
-    '''
-    def get_words(words):
-        ret = []
-        for word_id in words:
-            word = array[word_id] if word_id != None and word_id < len(array) else random.choice(array)
-            ret.append(word.decode('utf-8'))
-
-        return ret
-
-    words = get_words([first_id, second_id, third_id])
-    return render_template('home.html', words=words)
+    return render_template('home.html')
 
 @app.route('/api/words')
 def api_words():
-    return json.dumps(['frirst', '2nd', 'th33rd'])
+    # NOTE: below is old code from route('/') up for a review
+    #
+    #'''
+    #    print len(array)
+    #while first_id == None:
+    #    rand_int = randint(0, len(array)-1)
+    #    value = array[rand_int]
+    #    if len(value) > 0:
+    #        first_id = rand_int
+    #while second_id == None:
+    #    rand_int = randint(0, len(array)-1)
+    #    value = array[rand_int]
+    #    if len(value) > 0:
+    #        second_id = rand_int
+    #'''
+    #
+    #def get_words(words):
+    #    ret = []
+    #    for word_id in words:
+    #        word = array[word_id] if word_id != None and word_id < len(array) else random.choice(array)
+    #        ret.append(word.decode('utf-8'))
+    #    return ret
+
+    word1 = random.choice(array);
+    word2 = random.choice(array);
+    word3 = random.choice(array);
+
+    return json.dumps([word1, word2, word3])
 
 @app.route('/api/save', methods=['POST'])
 def api_save():
