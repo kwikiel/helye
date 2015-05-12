@@ -48,4 +48,4 @@ def manifest():
 def serve_static(path):
     return static_file(path, root='./static/')
 
-run(host='localhost', port=6969, reloader=True)
+run(host='0.0.0.0', port=5000, reloader=True)
